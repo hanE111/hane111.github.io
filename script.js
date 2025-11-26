@@ -43,7 +43,6 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
         }
     });
 }, observerOptions);
@@ -51,8 +50,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe all cards and sections
 document.querySelectorAll('.research-card, .project-card, .publication-item').forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.transition = 'opacity 0.3s ease';
     observer.observe(el);
 });
 
@@ -101,20 +99,19 @@ style.textContent = `
         background-color: var(--primary-color);
         color: white;
         border: none;
-        border-radius: 50%;
+        border-radius: 5px;
         cursor: pointer;
         display: none;
         align-items: center;
         justify-content: center;
         font-size: 1.2rem;
         box-shadow: var(--shadow-lg);
-        transition: all 0.3s ease;
+        transition: background-color 0.2s ease;
         z-index: 999;
     }
     
     .scroll-top-btn:hover {
         background-color: var(--secondary-color);
-        transform: translateY(-3px);
     }
     
     .nav-links a.active {

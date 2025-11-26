@@ -1,15 +1,15 @@
 /* Global Styles */
 :root {
-    --primary-color: #1e40af;
-    --secondary-color: #1e3a8a;
-    --accent-color: #2563eb;
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #3b82f6;
     --text-dark: #1f2937;
     --text-light: #6b7280;
-    --bg-light: #eff6ff;
+    --bg-light: #f8fafc;
     --bg-white: #ffffff;
-    --border-color: #dbeafe;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --border-color: #e2e8f0;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -22,7 +22,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: #f0f9ff;
+    background-color: var(--bg-white);
 }
 
 .container {
@@ -33,12 +33,11 @@ body {
 
 /* Header & Navigation */
 header {
-    background-color: #ffffff;
+    background-color: var(--bg-white);
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 2px solid #dbeafe;
 }
 
 nav {
@@ -78,7 +77,7 @@ nav .container {
 /* Hero Section */
 .hero {
     padding: 5rem 0;
-    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    background-color: #2563eb;
     color: white;
 }
 
@@ -121,19 +120,18 @@ nav .container {
     justify-content: center;
     color: white;
     font-size: 1.5rem;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 .social-links a:hover {
     background-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-3px);
 }
 
 .hero-image img {
     width: 100%;
     max-width: 400px;
     border-radius: 50%;
-    border: 8px solid rgba(255, 255, 255, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.3);
     box-shadow: var(--shadow-lg);
 }
 
@@ -167,25 +165,25 @@ h2 {
 }
 
 .motto {
-    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-    color: white;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-top: 3rem;
     text-align: center;
-    position: relative;
+    border-left: 4px solid var(--primary-color);
 }
 
 .motto i {
-    font-size: 1.5rem;
-    opacity: 0.5;
+    font-size: 1rem;
+    opacity: 0.3;
 }
 
 .motto p {
     font-size: 1.3rem;
     font-style: italic;
     margin: 1rem 0;
-    color: white;
+    color: var(--text-dark);
 }
 
 /* Research Section */
@@ -199,13 +197,13 @@ h2 {
 .research-card {
     background-color: var(--bg-white);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.2s ease;
 }
 
 .research-card:hover {
-    transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -236,7 +234,7 @@ h2 {
     background-color: var(--bg-white);
     padding: 2rem;
     margin-bottom: 1.5rem;
-    border-radius: 10px;
+    border-radius: 5px;
     border-left: 4px solid var(--primary-color);
     box-shadow: var(--shadow);
 }
@@ -285,13 +283,13 @@ h2 {
 .project-card {
     background-color: var(--bg-white);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -353,12 +351,11 @@ h2 {
     border-radius: 5px;
     text-decoration: none;
     font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 .contact-btn:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -416,20 +413,4 @@ footer p {
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;
-}
-
-/* Loading Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section {
-    animation: fadeIn 0.8s ease;
 }
