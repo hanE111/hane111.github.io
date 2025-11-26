@@ -2,119 +2,232 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HaEun Yoo</title>
+  <title>HaEun Yoo | AI & Computational Biology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HaEun Yoo - Research portfolio in biomedical AI, computational biology, and drug discovery." />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9fafb;
-      color: #1f2937;
-    }
-    header {
-      background: #111827;
-      color: white;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
-      color: #9ca3af;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-    section {
-      margin-bottom: 2.5rem;
-    }
-    h2 {
-      color: #111827;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.3rem;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 2rem 0;
-      color: #6b7280;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Yoo HaEun</h1>
-    <p>Undergraduate Student at Seoul National University</p>
+  <header class="top-nav">
+    <div class="logo">HY</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <section>
-      <h2>About Me</h2>
+    <!-- Hero section -->
+    <section class="hero" id="top">
+      <div class="hero-left">
+        <p class="eyebrow">AI • Computational Biology • Drug Discovery</p>
+        <h1>Hi, I’m <span class="accent">HaEun Yoo</span>.</h1>
+        <p class="hero-text">
+          I’m an aspiring researcher working at the intersection of
+          <strong>biomedical AI, drug discovery, and computational biology</strong>.  
+          I build machine learning systems to make sense of molecular structure,
+          multi-omics data, and patient outcomes.
+        </p>
+        <div class="hero-buttons">
+          <a href="#research" class="btn primary">View research interests</a>
+          <a href="#projects" class="btn ghost">Browse projects</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/your-github-username" target="_blank" rel="noopener">GitHub</a>
+          <span>•</span>
+          <a href="https://www.linkedin.com/in/your-linkedin-handle" target="_blank" rel="noopener">LinkedIn</a>
+          <!-- Add more if needed -->
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="profile-card">
+          <img src="images/profile.jpg" alt="Profile photo of HaEun Yoo" class="profile-photo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About</h2>
       <p>
-        I’m an undergraduate researcher at Seoul National University majoring in Computer Science and Engineering,
-        with a strong interest in biomedical machine learning, LLM applications in health, and computational neuroscience.
-        I’m passionate about using AI to solve real-world problems, especially at the intersection of health and technology.
+        I am an undergraduate student in <strong>Computer Science & Biology</strong>, with research experience in
+        <strong>digital mental health, molecular modeling, and drug response prediction</strong>.  
+        My long-term goal is to pursue a PhD and lead a research group that develops
+        interpretable machine learning systems to improve how we prevent, diagnose, and treat disease.
+      </p>
+      <p>
+        I particularly enjoy working on problems that connect rigorous modeling with clinically meaningful questions:
+        from understanding behavioral digital biomarkers to interpreting how molecular structure
+        and multi-omics features relate to therapeutic response.
       </p>
     </section>
 
-    <section>
-      <h2>Research & Publications</h2>
-      <ul>
+    <!-- Research interests -->
+    <section id="research" class="section">
+      <h2>Research Interests</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Biomedical AI</h3>
+          <p>
+            Interpretable machine learning models for precision medicine, clinical decision support,
+            and patient-specific outcome prediction.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Drug Discovery & Molecular Modeling</h3>
+          <p>
+            Molecular graph–language models, 3D-aware representation learning, and captioning models
+            that connect chemical structure to human-readable explanations.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Digital Biomarkers & Mental Health</h3>
+          <p>
+            Passive sensing, behavioral time-series analysis, and feature selection methods to derive
+            robust digital biomarkers from real-world data.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="section">
+      <h2>Publications & Manuscripts</h2>
+      <p class="section-note">
+        * denotes equal contribution. For a full, up-to-date list, see my
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a> (if you have one).
+      </p>
+
+      <ul class="pub-list">
         <li>
-          <strong>AI-based Mental Health Assessment for Adolescents Using Their Daily Digital Activities</strong><br />
-          Co-author, IEEE DSAA 2024<br />
-          <a href="#">[PDF / Link]</a>
+          <div class="pub-item">
+            <div>
+              <span class="pub-title">
+                AI-Based Mental Health Assessment for Adolescents Using Their Daily Digital Activities
+              </span><br />
+              <span class="pub-authors">
+                [Author list incl. <strong>H. Yoo</strong>]
+              </span><br />
+              <span class="pub-venue">
+                IEEE International Conference on Data Science and Advanced Analytics (DSAA), 2024.
+              </span>
+            </div>
+            <div class="pub-links">
+              <!-- Replace with actual links -->
+              <a href="#" target="_blank" rel="noopener">Paper</a>
+              <a href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
         </li>
+
         <li>
-          <strong>Survey on AI-Drug Discovery with Knowledge Graphs: Data,
-            Algorithm and Application</strong><br />
-          First author, Journal of Computing Science and Engineering (JCSE), accepted<br />
-          <a href="#">[PDF / Link]</a>
+          <div class="pub-item">
+            <div>
+              <span class="pub-title">
+                GraphT5: A Tri-Modal Molecular Graph–Language Model with Explicit 3D Geometry for Molecule Captioning
+              </span><br />
+              <span class="pub-authors">
+                S. Kim*, N. Kim*, <strong>H. Yoo*</strong>, Y. Piao, S. Kim
+              </span><br />
+              <span class="pub-venue">
+                Manuscript in preparation / resubmission.
+              </span>
+            </div>
+            <div class="pub-links">
+              <a href="#" target="_blank" rel="noopener">PDF (draft)</a>
+            </div>
+          </div>
         </li>
-        <li>
-          <strong>Ongoing: Molecule-to-Text Generation Using LLMs</strong><br />
-          First-author project (in progress)
-        </li>
+
+        <!-- Add more entries as needed -->
       </ul>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          NLP + calendar + web automation for personalized public welfare access
-        </li>
-        <li>
-          <strong>Biomedical Sensor Stream Analysis</strong> – Real-time wearables + ML modeling
-        </li>
-      </ul>
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Selected Projects</h2>
+      <div class="card-grid">
+        <article class="card project-card">
+          <h3>Digital Biomarkers for Adolescent Mental Health</h3>
+          <p>
+            Built data pipelines and analysis tools for multimodal behavioral data from stylus dynamics,
+            eye-tracking, typing patterns, and device motion collected from over 1,000 students.
+          </p>
+          <ul class="tag-list">
+            <li>Time-series</li>
+            <li>Feature selection</li>
+            <li>Mental health</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Code</a>
+            <a href="#" target="_blank" rel="noopener">Paper</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>GraphT5 Molecular Captioning</h3>
+          <p>
+            Extended a molecular graph–language model to incorporate 3D conformers and improve
+            long-form molecule captioning performance across multiple datasets.
+          </p>
+          <ul class="tag-list">
+            <li>Graph ML</li>
+            <li>NLP</li>
+            <li>3D geometry</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Code</a>
+            <a href="#" target="_blank" rel="noopener">PDF</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>Drug Response Prediction</h3>
+          <p>
+            Explored transfer-learning pipelines for predicting patient-derived xenograft (PDX) drug response
+            by aligning cell-line and patient cohorts and leveraging multi-omics data.
+          </p>
+          <ul class="tag-list">
+            <li>Transfer learning</li>
+            <li>Drug response</li>
+            <li>PDX / TCGA</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section>
+    <!-- Contact -->
+    <section id="contact" class="section">
       <h2>Contact</h2>
       <p>
-        📧 Email: [yhhen111@snu.ac.kr] <br />
-        🔗 <a href="https://github.com/hane111">GitHub</a> |
-        <a href="https://www.linkedin.com/in/haeun-yoo-104003255/">LinkedIn</a>
+        The best way to reach me is by email:
+        <a href="mailto:youremail@domain.com">youremail@domain.com</a>.
+      </p>
+      <p>
+        You can also find me on
+        <a href="https://github.com/your-github-username" target="_blank" rel="noopener">GitHub</a>
+        and
+        <a href="https://www.linkedin.com/in/your-linkedin-handle" target="_blank" rel="noopener">LinkedIn</a>.
       </p>
     </section>
   </main>
 
-  <footer>
-    © 2025 Yoo, HaEun. All rights reserved.<br />
+  <footer class="footer">
+    <span>© <span id="year"></span> HaEun Yoo. All rights reserved.</span>
   </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
