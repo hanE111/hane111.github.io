@@ -14,6 +14,7 @@
                 <a href="#home" class="logo">HaEun Yoo</a>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#research">Research</a></li>
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -44,7 +45,7 @@
                             <a href="https://github.com/hane111" target="_blank" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="mailto:yhhen111@snu.ac.kr" aria-label="Email">
+                            <a href="/cdn-cgi/l/email-protection#8af3e2e2efe4bbbbbbcaf9e4ffa4ebe9a4e1f8" aria-label="Email">
                                 <i class="fas fa-envelope"></i>
                             </a>
                         </div>
@@ -64,6 +65,28 @@
                     <p>I am a research assistant at the Bio&Health Informatics Lab in Seoul National University with a passion for applying artificial intelligence to solve critical problems in drug discovery and precision medicine. Currently, I work as a Research Assistant in Professor Sun Kim's Bio & Health Informatics Lab, where I focus on developing AI models for cancer and neurodegenerative disease drug discovery.</p>
                     
                     <p>My research spans the intersection of machine learning, computational biology, and clinical applications. I'm particularly interested in how we can leverage multi-modal data and transfer learning to predict patient-specific drug responses and accelerate the drug development pipeline.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-content">
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div>
+                                <h3>Seoul National University</h3>
+                                <p class="degree">B.S. in Computer Science and Engineering</p>
+                            </div>
+                            <div class="education-date">
+                                <p>Mar 2021 – Aug 2025</p>
+                                <p class="location">Seoul, Republic of Korea</p>
+                            </div>
+                        </div>
+                        <p class="gpa">GPA: 3.51/4.3</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -97,29 +120,92 @@
             </div>
         </section>
 
+        <!-- Research Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>Research Experience</h2>
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Bio & Health Informatics Lab</h3>
+                                <p class="position">Undergraduate Researcher</p>
+                                <p class="institution">Department of CSE, Seoul National University</p>
+                                <p class="advisor">Advisor: Prof. Sun Kim</p>
+                            </div>
+                            <p class="date">Apr 2024 – Present</p>
+                        </div>
+                        <ul class="experience-details">
+                            <li>Designing and implementing patient-specific pan-cancer drug response prediction models via transfer learning from bulk cell line data to PDX.</li>
+                            <li>Extending molecular graph–language modeling with 3D embeddings and cross-token attention; preparing resubmission as planned co-first author.</li>
+                            <li>Published a survey on AI-Drug Discovery with Knowledge Graphs as co-first author.</li>
+                            <li>Collaborated with Ewha University Hospital on colon cancer drug response prediction; preprocessed clinical/molecular datasets and adapted an existing DRP model to generate candidate therapies for clinical testing.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Real-Time Ubiquitous Systems Lab</h3>
+                                <p class="position">Undergraduate Researcher</p>
+                                <p class="institution">Department of CSE, Seoul National University</p>
+                                <p class="advisor">Advisor: Prof. Chang-gun Lee</p>
+                            </div>
+                            <p class="date">Aug 2022 – Mar 2024</p>
+                        </div>
+                        <ul class="experience-details">
+                            <li>Published research on AI-based adolescent mental health assessment as co-author.</li>
+                            <li>Contributed to the design of multimodal sensor data pipelines for AI-based adolescent mental health assessment, as part of a long-term government R&D project in collaboration with SNU Hospital.</li>
+                            <li>Contributed to all stages of the project, from planning to publication.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Publications Section -->
         <section id="publications" class="publications">
             <div class="container">
                 <h2>Publications</h2>
+                
+                <h3 class="pub-category">In Preparation</h3>
                 <div class="publication-list">
                     <div class="publication-item">
-                        <h3>Knowledge Graphs for AI-Driven Drug Discovery</h3>
-                        <p class="authors"><strong>HaEun Yoo</strong> (Co-first author), et al.</p>
-                        <p class="details">Research on leveraging knowledge graphs to improve AI-based drug discovery approaches for complex diseases.</p>
+                        <h3>Transfer Learning from Bulk Cell Line Data to PDX for Patient-Specific Pan-cancer Drug Response Prediction</h3>
+                        <p class="authors"><strong>H. Yoo</strong>, I. Sung, S. Kim</p>
+                        <p class="details">Manuscript in preparation</p>
+                    </div>
+                    <div class="publication-item">
+                        <h3>GraphT5: Unified Molecular Graph-Language Modeling via Multi-Modal Cross-Token Attention and Gated Geometry</h3>
+                        <p class="authors">S. Kim*, N. Kim*, <strong>H. Yoo*</strong>, Y. Piao, S. Kim</p>
+                        <p class="details">Co-first author (*equal contribution). Preparing for resubmission.</p>
+                        <div class="pub-tags">
+                            <span class="tag">Graph Neural Networks</span>
+                            <span class="tag">Language Models</span>
+                            <span class="tag">3D Molecules</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="pub-category">Published</h3>
+                <div class="publication-list">
+                    <div class="publication-item">
+                        <h3>Survey on AI-Drug Discovery with Knowledge Graphs: Data, Algorithm, and Application</h3>
+                        <p class="authors">D. Kong*, Y. Ha*, <strong>H. Yoo*</strong>, D. Bang, S. Kim</p>
+                        <p class="details">Co-first author (*equal contribution). <em>Journal of Computing Science and Engineering</em>, vol. 19, no. 1, 2025.</p>
                         <div class="pub-tags">
                             <span class="tag">Knowledge Graphs</span>
                             <span class="tag">Drug Discovery</span>
-                            <span class="tag">AI/ML</span>
+                            <span class="tag">Survey Paper</span>
                         </div>
                     </div>
                     <div class="publication-item">
-                        <h3>AI-Based Drug Discovery for Oncology and Neurodegeneration</h3>
-                        <p class="authors"><strong>HaEun Yoo</strong> (Co-first author), et al.</p>
-                        <p class="details">Novel approaches for applying artificial intelligence to accelerate drug development for cancer and neurodegenerative diseases.</p>
+                        <h3>AI-Based Mental Health Assessment for Adolescents Using Their Daily Digital Activities</h3>
+                        <p class="authors">D. H. Kim, J. Lee, T. Lee, S. Baek, S. Jin, <strong>H. Yoo</strong>, Y. Cho, S. Park, K. Cho, C. G. Lee</p>
+                        <p class="details"><em>IEEE DSAA</em>, 2024.</p>
                         <div class="pub-tags">
-                            <span class="tag">Cancer</span>
-                            <span class="tag">Neurodegeneration</span>
-                            <span class="tag">Drug Discovery</span>
+                            <span class="tag">Mental Health</span>
+                            <span class="tag">Behavioral AI</span>
+                            <span class="tag">Clinical Applications</span>
                         </div>
                     </div>
                 </div>
@@ -181,7 +267,7 @@
                 <h2>Get In Touch</h2>
                 <p>I'm always open to discussing research collaborations, PhD opportunities, or interesting problems at the intersection of AI and medicine.</p>
                 <div class="contact-links">
-                    <a href="mailto:yhhen111@snu.ac.kr" class="contact-btn">
+                    <a href="/cdn-cgi/l/email-protection#e1988989848fd0d0d0a1928f94cf8082cf8a93" class="contact-btn">
                         <i class="fas fa-envelope"></i> Email Me
                     </a>
                     <a href="https://linkedin.com/in/haeunyoo" target="_blank" class="contact-btn">
@@ -199,9 +285,3 @@
         <div class="container">
             <p>&copy; 2025 HaEun Yoo. All rights reserved.</p>
             <p>Built with passion for AI and medicine.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
