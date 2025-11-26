@@ -2,7 +2,7 @@
 :root {
     --primary-color: #2aaaff;
     --secondary-color: #55ccff;
-    --accent-color: #3be0f6;
+    --accent-color: #3b64f6;
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --bg-light: #f8fafc;
@@ -77,7 +77,7 @@ nav .container {
 /* Hero Section */
 .hero {
     padding: 5rem 0;
-    background-color: #2563eb;
+    background-color: #2aaaff;
     color: white;
 }
 
