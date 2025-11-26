@@ -2,13 +2,412 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>HaEun Yoo | AI & Computational Biology</title>
+  <title>HaEun Yoo | Biomedical AI & Drug Discovery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="HaEun Yoo - Research portfolio in biomedical AI, computational biology, and drug discovery." />
-  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== Global ===== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #eef2ff 0, #ffffff 40%, #f8fafc 100%);
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #2563eb;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Top nav ===== */
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 7vw;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .top-nav nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-size: 0.95rem;
+      color: #4b5563;
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+
+    .top-nav nav a:hover {
+      color: #111827;
+      transform: translateY(-1px);
+    }
+
+    /* ===== Layout ===== */
+
+    main {
+      padding: 2.3rem 7vw 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 2.5rem 0 0;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      max-width: 46rem;
+      color: #4b5563;
+    }
+
+    .section-note {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    /* ===== Hero ===== */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 3rem;
+      align-items: center;
+      padding: 2rem 0 3rem;
+    }
+
+    .eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6b7280;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 3vw + 1.5rem, 3rem);
+      margin: 0.2rem 0 0.6rem;
+    }
+
+    .hero .accent {
+      background: linear-gradient(120deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-text {
+      font-size: 1rem;
+      max-width: 34rem;
+      color: #4b5563;
+    }
+
+    .hero-buttons {
+      margin: 1.4rem 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .btn {
+      padding: 0.6rem 1.3rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      border: 1px solid transparent;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+    }
+
+    .btn.ghost {
+      background: rgba(255, 255, 255, 0.96);
+      color: #111827;
+      border-color: #e5e7eb;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+      text-decoration: none;
+    }
+
+    .social-links {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 0.4rem;
+    }
+
+    .social-links a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero image */
+
+    .hero-right {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-card {
+      padding: 0.5rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #dbeafe, #f5d0fe);
+      display: inline-flex;
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.15);
+    }
+
+    .profile-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 999px;
+      object-fit: cover;
+      display: block;
+      background: #e5e7eb;
+    }
+
+    /* ===== Motto ===== */
+
+    .motto-section {
+      padding: 3rem 0 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .motto-box {
+      background: linear-gradient(135deg, #eef2ff, #faf5ff);
+      border: 1px solid rgba(199, 210, 254, 0.85);
+      padding: 1.8rem 2.4rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 28px rgba(79, 70, 229, 0.12);
+      max-width: 720px;
+      text-align: center;
+    }
+
+    .motto-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6366f1;
+      margin-bottom: 0.4rem;
+    }
+
+    .motto-text {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #4f46e5;
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    /* ===== Cards & grids ===== */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.25rem 1.35rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin: 0.4rem 0 0;
+    }
+
+    /* ===== Publications ===== */
+
+    .pub-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+    }
+
+    .pub-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .pub-title {
+      font-weight: 600;
+    }
+
+    .pub-authors,
+    .pub-venue {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .pub-links a {
+      display: inline-block;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #2563eb;
+      margin-left: 0.5rem;
+    }
+
+    .pub-links a:first-child {
+      margin-left: 0;
+    }
+
+    .pub-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Projects ===== */
+
+    .project-card p {
+      margin-bottom: 0.7rem;
+    }
+
+    .tag-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag-list li {
+      font-size: 0.8rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+
+    .project-links a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #2563eb;
+      margin-right: 0.7rem;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Footer ===== */
+
+    .footer {
+      padding: 1.8rem 7vw 2.2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 3rem;
+    }
+
+    /* ===== Responsive ===== */
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .hero-right {
+        order: -1;
+        margin-bottom: 1.3rem;
+      }
+
+      main {
+        padding-inline: 6vw;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .top-nav {
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .top-nav nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .top-nav nav a {
+        margin: 0.2rem 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .pub-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .motto-box {
+        padding-inline: 1.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="top-nav">
@@ -23,16 +422,15 @@
   </header>
 
   <main>
-    <!-- Hero section -->
+    <!-- Hero -->
     <section class="hero" id="top">
       <div class="hero-left">
         <p class="eyebrow">AI • Computational Biology • Drug Discovery</p>
         <h1>Hi, I’m <span class="accent">HaEun Yoo</span>.</h1>
         <p class="hero-text">
           I’m an aspiring researcher working at the intersection of
-          <strong>biomedical AI, drug discovery, and computational biology</strong>.  
-          I build machine learning systems to make sense of molecular structure,
-          multi-omics data, and patient outcomes.
+          <strong>biomedical AI, drug discovery, and computational biology</strong>. I build machine learning systems
+          to make sense of molecular structure, multi-omics data, and patient outcomes.
         </p>
         <div class="hero-buttons">
           <a href="#research" class="btn primary">View research interests</a>
@@ -42,11 +440,11 @@
           <a href="https://github.com/your-github-username" target="_blank" rel="noopener">GitHub</a>
           <span>•</span>
           <a href="https://www.linkedin.com/in/your-linkedin-handle" target="_blank" rel="noopener">LinkedIn</a>
-          <!-- Add more if needed -->
         </div>
       </div>
       <div class="hero-right">
         <div class="profile-card">
+          <!-- Put your photo at images/profile.jpg -->
           <img src="images/profile.jpg" alt="Profile photo of HaEun Yoo" class="profile-photo" />
         </div>
       </div>
@@ -55,8 +453,9 @@
     <!-- Motto -->
     <section id="motto" class="section motto-section">
       <div class="motto-box">
+        <div class="motto-label">Motto</div>
         <p class="motto-text">
-          “Your motto here — something short, powerful, and meaningful.”
+          “Replace this with your own motto – something short, powerful, and meaningful.”
         </p>
       </div>
     </section>
@@ -65,15 +464,15 @@
     <section id="about" class="section">
       <h2>About</h2>
       <p>
-        I am an undergraduate student in <strong>Computer Science & Biology</strong>, with research experience in
-        <strong>digital mental health, molecular modeling, and drug response prediction</strong>.  
-        My long-term goal is to pursue a PhD and lead a research group that develops
-        interpretable machine learning systems to improve how we prevent, diagnose, and treat disease.
+        I am an undergraduate student in <strong>Computer Science &amp; Biology</strong>, with research experience in
+        <strong>digital mental health, molecular modeling, and drug response prediction</strong>. My long-term goal is
+        to pursue a PhD and lead a research group that develops interpretable machine learning systems to improve how
+        we prevent, diagnose, and treat disease.
       </p>
       <p>
         I particularly enjoy working on problems that connect rigorous modeling with clinically meaningful questions:
-        from understanding behavioral digital biomarkers to interpreting how molecular structure
-        and multi-omics features relate to therapeutic response.
+        from understanding behavioral digital biomarkers to interpreting how molecular structure and multi-omics
+        features relate to therapeutic response.
       </p>
     </section>
 
@@ -84,22 +483,22 @@
         <article class="card">
           <h3>Biomedical AI</h3>
           <p>
-            Interpretable machine learning models for precision medicine, clinical decision support,
-            and patient-specific outcome prediction.
+            Interpretable machine learning models for precision medicine, clinical decision support, and
+            patient-specific outcome prediction.
           </p>
         </article>
         <article class="card">
-          <h3>Drug Discovery & Molecular Modeling</h3>
+          <h3>Drug Discovery &amp; Molecular Modeling</h3>
           <p>
-            Molecular graph–language models, 3D-aware representation learning, and captioning models
-            that connect chemical structure to human-readable explanations.
+            Molecular graph–language models, 3D-aware representation learning, and captioning models that connect
+            chemical structure to human-readable explanations.
           </p>
         </article>
         <article class="card">
-          <h3>Digital Biomarkers & Mental Health</h3>
+          <h3>Digital Biomarkers &amp; Mental Health</h3>
           <p>
-            Passive sensing, behavioral time-series analysis, and feature selection methods to derive
-            robust digital biomarkers from real-world data.
+            Passive sensing, behavioral time-series analysis, and feature selection methods to derive robust digital
+            biomarkers from real-world data.
           </p>
         </article>
       </div>
@@ -107,10 +506,10 @@
 
     <!-- Publications -->
     <section id="publications" class="section">
-      <h2>Publications & Manuscripts</h2>
+      <h2>Publications &amp; Manuscripts</h2>
       <p class="section-note">
         * denotes equal contribution. For a full, up-to-date list, see my
-        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a> (if you have one).
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>.
       </p>
 
       <ul class="pub-list">
@@ -153,8 +552,6 @@
             </div>
           </div>
         </li>
-
-        <!-- Add more entries as needed -->
       </ul>
     </section>
 
@@ -165,8 +562,8 @@
         <article class="card project-card">
           <h3>Digital Biomarkers for Adolescent Mental Health</h3>
           <p>
-            Built data pipelines and analysis tools for multimodal behavioral data from stylus dynamics,
-            eye-tracking, typing patterns, and device motion collected from over 1,000 students.
+            Built data pipelines and analysis tools for multimodal behavioral data from stylus dynamics, eye-tracking,
+            typing patterns, and device motion collected from over 1,000 students.
           </p>
           <ul class="tag-list">
             <li>Time-series</li>
@@ -182,8 +579,8 @@
         <article class="card project-card">
           <h3>GraphT5 Molecular Captioning</h3>
           <p>
-            Extended a molecular graph–language model to incorporate 3D conformers and improve
-            long-form molecule captioning performance across multiple datasets.
+            Extended a molecular graph–language model to incorporate 3D conformers and improve long-form molecule
+            captioning performance across multiple datasets.
           </p>
           <ul class="tag-list">
             <li>Graph ML</li>
@@ -199,8 +596,8 @@
         <article class="card project-card">
           <h3>Drug Response Prediction</h3>
           <p>
-            Explored transfer-learning pipelines for predicting patient-derived xenograft (PDX) drug response
-            by aligning cell-line and patient cohorts and leveraging multi-omics data.
+            Explored transfer-learning pipelines for predicting patient-derived xenograft (PDX) drug response by
+            aligning cell-line and patient cohorts and leveraging multi-omics data.
           </p>
           <ul class="tag-list">
             <li>Transfer learning</li>
@@ -235,8 +632,7 @@
   </footer>
 
   <script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
